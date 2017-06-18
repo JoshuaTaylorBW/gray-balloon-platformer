@@ -302,6 +302,10 @@ public class Protagonist : MonoBehaviour {
 	void leftPush(float pushTime)
 	{
 		beingPushed = true;
+		running = false;
+		Jumping = false;
+		Falling = false;
+		stopJumping = false;
 
 		if(pushTime == -1)
 		{

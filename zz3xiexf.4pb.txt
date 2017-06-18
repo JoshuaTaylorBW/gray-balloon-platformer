@@ -1,0 +1,35 @@
+﻿Left moving camera and Hard Design Changes
+
+Add writers and grass to Hard.
+
+Change left pushes to not trigger incorrectly (hopefully)
+
+Fix broken Left Push on Protagonist.cs
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   ../Assembly-CSharp.csproj
+#	modified:   Character/Protagonist.cs
+#	new file:   Entities/Engine/Camera/Red Camera.prefab
+#	new file:   Entities/Engine/Camera/Red Camera.prefab.meta
+#	modified:   Hard.unity
+#	modified:   ../Library/CurrentLayout.dwlt
+#	modified:   ../Library/ScriptAssemblies/Assembly-CSharp.dll
+#	modified:   ../Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+#	new file:   ../Library/ShaderCache/8/8cec5e883b55b0c2e54cb34026704abc.bin
+#	modified:   ../Library/assetDatabase3
+#	modified:   ../Library/expandedItems
+#	modified:   ../Library/metadata/00/00000000000000004000000000000000
+#	modified:   ../Library/metadata/00/00000000000000006100000000000000
+#	new file:   ../Library/metadata/57/570ce6402523ae34fb4b0ff6a306988e
+#	new file:   ../Library/metadata/57/570ce6402523ae34fb4b0ff6a306988e.info
+#	modified:   ../Library/metadata/5a/5a2f11784616ae34f94734b6b10c50a7
+#
+# Changes not staged for commit:
+#	modified:   Barebones.unity
+#
+

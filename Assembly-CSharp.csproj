@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E9E71954-05EC-9DC8-DBA8-7BC0139A6396}</ProjectGuid>
+    <ProjectGuid>{41CAB407-BDB1-737A-D996-675B454E8174}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,6 +51,7 @@
      <Compile Include="Assets\Entities\Engine\Camera\CenteredCameraController.cs" />
      <Compile Include="Assets\Entities\Engine\Camera\CharacterOnLeftCameraController.cs" />
      <Compile Include="Assets\Entities\Engine\Camera\CharacterOnRightCameraController.cs" />
+     <Compile Include="Assets\Entities\Engine\Camera\MovingLeftCameraController.cs" />
      <Compile Include="Assets\Entities\Fights\Fight.cs" />
      <Compile Include="Assets\Entities\Finish Line\FinishLine.cs" />
      <Compile Include="Assets\Entities\Left Push\LeftPush.cs" />
