@@ -12,10 +12,10 @@ public class MovingLeftCameraController : MonoBehaviour {
 	void Start () {
 		protagonist = GameObject.Find ("Character");
 		controller = GetComponent<CharacterController>();
-		velocity = new Vector3(moveSpeed, 0, 0);
+		velocity = new Vector3(-moveSpeed, 0, 0);
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		controller.Move(velocity * Time.deltaTime);
-}
+	}
 }

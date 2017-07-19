@@ -21,6 +21,7 @@ public class Protagonist : MonoBehaviour {
 	public float friction;
 	public bool running = false;
 	public bool beingPushed = false;
+	private bool stopPushing = false;
 	private float airSpeed;
 	public float gravity;
 
@@ -247,7 +248,6 @@ public class Protagonist : MonoBehaviour {
 		velocity.x = currSpeed;
 		if(beingPushed)
 		{
-			Debug.Log("bieng pushed");
 			velocity = new Vector3(
 				0f,
 				velocity.y,
@@ -280,7 +280,7 @@ public class Protagonist : MonoBehaviour {
 
 	void bounce(float bounceHeight)
 	{
-		beingPushed = false;
+		stopPushing = true;
 		Jumping = true;
 		if(bounceHeight == -1){
 			velocity = new Vector3(
@@ -301,32 +301,37 @@ public class Protagonist : MonoBehaviour {
 
 	void leftPush(float pushTime)
 	{
-		beingPushed = true;
-		running = false;
-		Jumping = false;
-		Falling = false;
-		stopJumping = false;
+		if(!beingPushed){
+			beingPushed = true;
+			running = false;
+			Jumping = false;
+			Falling = false;
+			stopJumping = true;
 
-		if(pushTime == -1)
-		{
+			if(pushTime == -1)
+			{
 
-			StartCoroutine(pushForX(1.5f));
+				StartCoroutine(pushForX(1.5f));
+			}
+			else
+			{
+				StartCoroutine(pushForX(pushTime));
+			}
 		}
-		else
-		{
-			StartCoroutine(pushForX(pushTime));
-		}
-			
-
 	}
 
 	IEnumerator pushForX(float pushTime)
 	{
-		while (true)
-		{
-			yield return new WaitForSeconds(pushTime);
-			beingPushed = false;
+		for(float i = pushTime; i >= 0; i-=0.1f){
+			if(stopPushing){
+				stopPushing = false;
+				i = -0.1f;
+			}else{
+				beingPushed = true;
+				yield return new WaitForSeconds(0.1f);
+			}
 		}
+		beingPushed = false;
 	}
 
 	void fall()
@@ -378,5 +383,4 @@ public class Protagonist : MonoBehaviour {
 	public bool getJumping(){
 		return Jumping;
 	}
-
 }

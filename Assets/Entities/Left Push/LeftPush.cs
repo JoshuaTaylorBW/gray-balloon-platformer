@@ -14,6 +14,7 @@ public class LeftPush : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if(col.gameObject.name == "Character"){
+			Debug.Log(this.gameObject.name);
 			protagonist.SendMessage("leftPush", pushForce);
 		}
 	}

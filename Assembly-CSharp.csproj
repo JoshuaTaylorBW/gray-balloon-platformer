@@ -52,10 +52,12 @@
      <Compile Include="Assets\Entities\Engine\Camera\CharacterOnLeftCameraController.cs" />
      <Compile Include="Assets\Entities\Engine\Camera\CharacterOnRightCameraController.cs" />
      <Compile Include="Assets\Entities\Engine\Camera\MovingLeftCameraController.cs" />
+     <Compile Include="Assets\Entities\Engine\Camera\MovingRightCameraController.cs" />
      <Compile Include="Assets\Entities\Fights\Fight.cs" />
      <Compile Include="Assets\Entities\Finish Line\FinishLine.cs" />
      <Compile Include="Assets\Entities\Left Push\LeftPush.cs" />
      <Compile Include="Assets\Entities\Turtles\Turtle.cs" />
+     <Compile Include="Assets\GUI\Pause\PauseButton.cs" />
      <Compile Include="Assets\Map\ConsoleText.cs" />
      <Compile Include="Assets\Map\FlareMap.cs" />
      <Compile Include="Assets\Map\Grass.cs" />
@@ -69,10 +71,14 @@
      <None Include="Assets\Editor\GitHub\CREDITS.txt" />
      <None Include="Assets\Map\Tutorial.txt" />
      <None Include="Assets\Map\Levels\1A\1A.txt" />
+     <None Include="Assets\Map\Levels\Hard\Left-moving.txt" />
+     <None Include="Assets\Map\Left-moving.txt" />
+     <None Include="Assets\Map\Levels\Left-moving.txt" />
      <None Include="Assets\Map\Levels\Hard\HardA - Copy.txt" />
      <None Include="Assets\Map\Levels\1A\Tutorial.txt" />
      <None Include="Assets\Map\FirstMap.txt" />
      <None Include="Assets\Editor\GitHub\EULA.txt" />
+     <None Include="Assets\Map\Left-moving-1.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

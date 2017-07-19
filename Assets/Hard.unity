@@ -17348,6 +17348,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114000014161303376, guid: c0da52cb98507944590f2519aa729daf,
+        type: 2}
+      propertyPath: newScene
+      value: Left-Moving
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0da52cb98507944590f2519aa729daf, type: 2}
   m_IsPrefabParent: 0
@@ -31491,16 +31496,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012754435948, guid: 341d3a9f312485d4e859b0eca4f6205c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114000012568132432, guid: 341d3a9f312485d4e859b0eca4f6205c,
         type: 2}
       propertyPath: mobile
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000012754435948, guid: 341d3a9f312485d4e859b0eca4f6205c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 33.47
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012754435948, guid: 341d3a9f312485d4e859b0eca4f6205c, type: 2}
       propertyPath: m_RootOrder
