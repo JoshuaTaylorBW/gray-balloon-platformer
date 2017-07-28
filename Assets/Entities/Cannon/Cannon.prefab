@@ -83,8 +83,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CannonAngle: 0
-  CannonFrequency: 0
-  CannonSpeed: 0
+  CannonFrequency: 1
+  CannonSpeed: 5
+  CannonIsOnScreen: 1
 --- !u!212 &212000011290291710
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Hard.unity
+- path: Assets/Hard-Moving-Right.unity
   isLoaded: 1
   isActive: 1

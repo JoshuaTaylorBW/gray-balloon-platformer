@@ -16,15 +16,15 @@ public class Cannon : MonoBehaviour {
 		StartCoroutine(spawnCannonBalls());
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
+	void Stop () {
+		StopCoroutine("spawnCannonBalls");
 	}
 
 	void MakeCannonball(){
 		cannonBall = Instantiate(Resources.Load("Cannon-Ball"), transform.position, Quaternion.identity) as GameObject;
 		cannonBall.SendMessage("SetAngle", CannonAngle);	
 		cannonBall.SendMessage("SetSpeed", CannonSpeed);
+		cannonBall.SendMessage("SetCannon", this.gameObject);
 	}
 
 	IEnumerator spawnCannonBalls()

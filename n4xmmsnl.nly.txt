@@ -1,0 +1,86 @@
+﻿Cannons and Hard Moving Right Fixes
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Jul 28 15:57:08 2017 -0600
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   Assembly-CSharp.csproj
+#	new file:   Assets/Character/Dead.anim
+#	new file:   Assets/Character/Dead.anim.meta
+#	modified:   Assets/Character/Death.anim
+#	modified:   Assets/Character/Death.png
+#	modified:   Assets/Character/Death.png.meta
+#	modified:   Assets/Character/Death_0.controller
+#	new file:   Assets/Character/Death_1.controller
+#	new file:   Assets/Character/Death_1.controller.meta
+#	modified:   Assets/Character/Protagonist.cs
+#	modified:   Assets/Character/Running_0.controller
+#	renamed:    Assets/Character/gray-balloon-platformer - Shortcut.lnk.meta -> Assets/Entities/Cannon.meta
+#	modified:   Assets/Entities/Cannon/Cannon.cs
+#	modified:   Assets/Entities/Cannon/Cannon.prefab
+#	modified:   Assets/Entities/Cannon/CannonBall.cs
+#	modified:   Assets/Entities/Left Push/LeftPush.cs
+#	modified:   Assets/Hard-Moving-Right.unity
+#	modified:   Assets/Hard.unity
+#	modified:   Assets/Left-Moving.unity
+#	new file:   Assets/Map/Levels/Hard/Right-moving.tmx
+#	new file:   Assets/Map/Levels/Hard/Right-moving.tmx.meta
+#	modified:   Assets/Map/Levels/Hard/Right-moving.txt
+#	modified:   Assets/Map/Tile.cs
+#	modified:   Assets/Resources/C-uppercase-Sheet_0.controller
+#	modified:   Assets/Resources/Cannon-Ball.prefab
+#	modified:   Assets/Resources/c-lowercase-Sheet_0.controller
+#	modified:   Library/CurrentLayout.dwlt
+#	modified:   Library/InspectorExpandedItems.asset
+#	modified:   Library/LastSceneManagerSetup.txt
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+#	modified:   Library/assetDatabase3
+#	modified:   Library/expandedItems
+#	modified:   Library/metadata/00/00000000000000004000000000000000
+#	modified:   Library/metadata/00/00000000000000006100000000000000
+#	modified:   Library/metadata/00/0000000000000000b000000000000000
+#	new file:   Library/metadata/12/121fa52f83ecf91429f95280d58d926c
+#	new file:   Library/metadata/12/121fa52f83ecf91429f95280d58d926c.info
+#	new file:   Library/metadata/23/2309792ba123f2a4b82f67a9efff15fd
+#	new file:   Library/metadata/23/2309792ba123f2a4b82f67a9efff15fd.info
+#	modified:   Library/metadata/24/2421bd28d5dbb424e8adede926b98a23
+#	new file:   Library/metadata/2e/2e429849ba3f0154991c24bea17026a5
+#	new file:   Library/metadata/2e/2e429849ba3f0154991c24bea17026a5.info
+#	new file:   Library/metadata/33/33eefc2102faefb4aa4dd103400d47be
+#	new file:   Library/metadata/33/33eefc2102faefb4aa4dd103400d47be.info
+#	new file:   Library/metadata/3e/3ee5f0a4b3a76ac4d81d524032f5e662
+#	new file:   Library/metadata/3e/3ee5f0a4b3a76ac4d81d524032f5e662.info
+#	new file:   Library/metadata/4c/4c26606e5a130e2409d66a40226db721
+#	new file:   Library/metadata/4c/4c26606e5a130e2409d66a40226db721.info
+#	modified:   Library/metadata/5a/5a2f11784616ae34f94734b6b10c50a7
+#	new file:   Library/metadata/5e/5e60f7129edbb294a851ee7e6cb78735
+#	new file:   Library/metadata/5e/5e60f7129edbb294a851ee7e6cb78735.info
+#	new file:   Library/metadata/96/96f71c4f4d360ff46854477a109f2587
+#	new file:   Library/metadata/96/96f71c4f4d360ff46854477a109f2587.info
+#	new file:   Library/metadata/a2/a2a6b3875c29be341ad0d69a81455350
+#	new file:   Library/metadata/a2/a2a6b3875c29be341ad0d69a81455350.info
+#	new file:   Library/metadata/b4/b43aa86fbed01d246ad973af43525914
+#	new file:   Library/metadata/b4/b43aa86fbed01d246ad973af43525914.info
+#	new file:   Library/metadata/c0/c0b87451dc93e4a48b3ed5f2f437d9f7
+#	new file:   Library/metadata/c0/c0b87451dc93e4a48b3ed5f2f437d9f7.info
+#	modified:   Library/metadata/d7/d7cdd4d15ecc3f249a39ed61c257ccc5
+#	modified:   Library/metadata/d7/d7cdd4d15ecc3f249a39ed61c257ccc5.info
+#	modified:   Library/metadata/db/db1c0b4be7f292b45bd86e4a46b02146
+#	new file:   Library/metadata/ef/ef9ce6a7f4e65224b8b293aa0b43eb51
+#	new file:   Library/metadata/ef/ef9ce6a7f4e65224b8b293aa0b43eb51.info
+#	new file:   Library/metadata/f2/f2f59e02d947e7c47b0c3cde4fe16795
+#	new file:   Library/metadata/f2/f2f59e02d947e7c47b0c3cde4fe16795.info
+#	new file:   Library/metadata/f8/f831e406ec6f453489562648219e4f5f
+#	new file:   Library/metadata/f8/f831e406ec6f453489562648219e4f5f.info
+#	new file:   Library/metadata/fc/fc1e545645185ed468bd0ed3362ee33b
+#	new file:   Library/metadata/fc/fc1e545645185ed468bd0ed3362ee33b.info
+#	modified:   ProjectSettings/EditorBuildSettings.asset
+#	modified:   gray-balloon-platformer.userprefs
+#
+

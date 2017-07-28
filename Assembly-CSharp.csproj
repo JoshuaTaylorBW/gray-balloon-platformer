@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Character\Protagonist.cs" />
      <Compile Include="Assets\Entities\Birds\Bird.cs" />
+     <Compile Include="Assets\Entities\Cannon\Cannon.cs" />
+     <Compile Include="Assets\Entities\Cannon\CannonBall.cs" />
      <Compile Include="Assets\Entities\Death\Death.cs" />
      <Compile Include="Assets\Entities\Engine\Camera\CenteredCameraController.cs" />
      <Compile Include="Assets\Entities\Engine\Camera\CharacterOnLeftCameraController.cs" />
@@ -66,7 +68,9 @@
      <Compile Include="Assets\Menu\Temp_Menu_Button.cs" />
      <Compile Include="Assets\Menu\temp_menu_pointer.cs" />
      <Compile Include="Assets\Writing\Scripts\Letter.cs" />
+     <Compile Include="Assets\Writing\Scripts\SpotWrite.cs" />
      <Compile Include="Assets\Writing\Scripts\Write.cs" />
+     <None Include="Assets\Map\Levels\Hard\Right-moving.txt" />
      <None Include="Assets\Map\Levels\Hard\HardA.txt" />
      <None Include="Assets\Editor\GitHub\CREDITS.txt" />
      <None Include="Assets\Map\Tutorial.txt" />

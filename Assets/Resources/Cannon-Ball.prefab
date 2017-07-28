@@ -23,6 +23,7 @@ GameObject:
   - 54: {fileID: 54000010550176140}
   - 135: {fileID: 135000012051960638}
   - 114: {fileID: 114000010799784680}
+  - 95: {fileID: 95000012658930120}
   m_Layer: 0
   m_Name: Cannon-Ball
   m_TagString: Untagged
@@ -58,6 +59,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!95 &95000012658930120
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013548039122}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010799784680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,6 +87,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121fa52f83ecf91429f95280d58d926c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protagonist: {fileID: 0}
+  cannon: {fileID: 0}
+  ballAngle: 0
+  ballSpeed: 0
+  whateverThisIs: {x: 0, y: 0, z: 0}
 --- !u!135 &135000012051960638
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -76,7 +99,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013548039122}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.08

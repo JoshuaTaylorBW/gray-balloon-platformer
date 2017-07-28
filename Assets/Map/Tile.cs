@@ -12,6 +12,7 @@ public class Tile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		checkCollisionBox();
+		gameObject.layer = 9;
 	}
 
 	public void setImage(Sprite image2){image = image2;}

@@ -21,11 +21,14 @@ public class Protagonist : MonoBehaviour {
 	public float friction;
 	public bool running = false;
 	public bool beingPushed = false;
-	private bool stopPushing = false;
 	private float airSpeed;
 	public float gravity;
 
+
+
 	public Vector3 velocity;
+	public bool dying = false;
+	public bool dead = false;
 	public bool Jumping = false;
 	public bool Falling = true;
 	public bool stopJumping = false;
@@ -43,11 +46,14 @@ public class Protagonist : MonoBehaviour {
 
 	void Update()
 	{
+
 		controller.Move(velocity * Time.deltaTime);
 
-		VerticalMovement();
+		if(!dying){
+			VerticalMovement();
 
-		mobileInput();
+			mobileInput();
+		}
 
 		if(velocity.y < 0 && !controller.isGrounded)
 		{
@@ -68,6 +74,7 @@ public class Protagonist : MonoBehaviour {
 			if(velocity.x > 0){
 				velocity.x -= 0.45f;
 			}else{
+				beingPushed = false;
 				velocity.x = 0;
 			}
 
@@ -140,7 +147,7 @@ public class Protagonist : MonoBehaviour {
 
 
 
-			if(controller.isGrounded)
+			if(controller.isGrounded && !dying)
 			{
 				animator.SetBool("Jumping", false);
 				Jumping = false;
@@ -248,6 +255,7 @@ public class Protagonist : MonoBehaviour {
 		velocity.x = currSpeed;
 		if(beingPushed)
 		{
+			Debug.Log("bieng pushed");
 			velocity = new Vector3(
 				0f,
 				velocity.y,
@@ -280,7 +288,7 @@ public class Protagonist : MonoBehaviour {
 
 	void bounce(float bounceHeight)
 	{
-		stopPushing = true;
+		beingPushed = false;
 		Jumping = true;
 		if(bounceHeight == -1){
 			velocity = new Vector3(
@@ -301,42 +309,43 @@ public class Protagonist : MonoBehaviour {
 
 	void leftPush(float pushTime)
 	{
-		if(!beingPushed){
-			beingPushed = true;
-			running = false;
-			Jumping = false;
-			Falling = false;
-			stopJumping = true;
+		beingPushed = true;
+		running = false;
+		Jumping = false;
+		Falling = false;
+		stopJumping = false;
 
-			if(pushTime == -1)
-			{
+		if(pushTime == -1)
+		{
 
-				StartCoroutine(pushForX(1.5f));
-			}
-			else
-			{
-				StartCoroutine(pushForX(pushTime));
-			}
+			StartCoroutine("pushForX", 1.5f);
 		}
+		else
+		{
+			StartCoroutine("pushForX", pushTime);
+		}
+
+
+	}
+
+	void stopPushing() {
+		beingPushed = false;
+		StopCoroutine("pushForX");
 	}
 
 	IEnumerator pushForX(float pushTime)
 	{
-		for(float i = pushTime; i >= 0; i-=0.1f){
-			if(stopPushing){
-				stopPushing = false;
-				i = -0.1f;
-			}else{
-				beingPushed = true;
-				yield return new WaitForSeconds(0.1f);
-			}
+		while (true)
+		{
+			yield return new WaitForSeconds(pushTime);
+			beingPushed = false;
 		}
-		beingPushed = false;
 	}
 
-	void fall()
-	{
-		velocity.y = -1;
+	void die () {
+		dying = true;
+		animator.SetBool("Dead", true);
+		controller.radius = 0.57f;
 	}
 
 	void VerticalMovement ()
@@ -356,7 +365,7 @@ public class Protagonist : MonoBehaviour {
 
 			}
 		}
-		if(!controller.isGrounded){
+		if(!controller.isGrounded && !dying){
 
 			if(Input.GetButtonUp("Jump")){
 				stopJumping = true;
@@ -365,7 +374,7 @@ public class Protagonist : MonoBehaviour {
 			animator.SetBool("Jumping", true);
 			if(Jumping && !Falling){
 				float yRate = velocity.y;
-				if(running){
+				if(running && !beingPushed){
 					velocity = new Vector3(
 						-((Input.GetAxis("Horizontal") * 3) * 1.7f),
 						velocity.y,
@@ -383,4 +392,5 @@ public class Protagonist : MonoBehaviour {
 	public bool getJumping(){
 		return Jumping;
 	}
+
 }

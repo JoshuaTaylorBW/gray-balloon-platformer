@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Tutorial.unity
   - enabled: 1
     path: Assets/Left-Moving.unity
+  - enabled: 1
+    path: Assets/Hard-Moving-Right.unity
